@@ -3,12 +3,26 @@
 import {useMemo, useState} from "react";
 import Link from "next/link";
 import {ArrowRight} from "lucide-react";
-import {portfolioItems} from "@/lib/content";
 import {cn} from "@/lib/utils";
 
-const categories = ["All", ...Array.from(new Set(portfolioItems.map((item) => item.category)))];
+type PortfolioItem = {
+  slug: string;
+  title: string;
+  category: string;
+  summary: string;
+  metric: string;
+};
 
-export function PortfolioFilter() {
+type PortfolioFilterProps = {
+  portfolioItems: PortfolioItem[];
+  outcomeLabel: string;
+};
+
+export function PortfolioFilter({portfolioItems, outcomeLabel}: PortfolioFilterProps) {
+  const categories = useMemo(
+    () => ["All", ...Array.from(new Set(portfolioItems.map((item) => item.category)))],
+    [portfolioItems],
+  );
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredItems = useMemo(() => {
@@ -17,7 +31,7 @@ export function PortfolioFilter() {
     }
 
     return portfolioItems.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+  }, [activeCategory, portfolioItems]);
 
   return (
     <div>
@@ -47,7 +61,7 @@ export function PortfolioFilter() {
               <h2 className="mt-3 text-xl font-bold">{item.title}</h2>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.summary}</p>
               <div className="mt-5 rounded-md bg-muted p-4">
-                <p className="text-xs text-muted-foreground">Outcome</p>
+                <p className="text-xs text-muted-foreground">{outcomeLabel}</p>
                 <p className="mt-1 font-semibold">{item.metric}</p>
               </div>
               <Link

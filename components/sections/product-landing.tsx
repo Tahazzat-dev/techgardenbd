@@ -1,3 +1,4 @@
+import {LeadForm} from "@/components/forms/lead-form";
 import {CtaBanner} from "@/components/sections/cta-banner";
 import {FaqAccordion} from "@/components/sections/faq-accordion";
 import {Features} from "@/components/sections/features";
@@ -7,16 +8,16 @@ import {Integrations} from "@/components/sections/integrations";
 import {PricingTable} from "@/components/sections/pricing-table";
 import {ProofBar} from "@/components/sections/proof-bar";
 import {Testimonials} from "@/components/sections/testimonials";
-import {LeadForm} from "@/components/forms/lead-form";
-import type {Locale} from "@/lib/i18n";
+import {getLocale} from "@/lib/i18n/server";
 import type {ProductLandingContent} from "@/lib/products/types";
 
 type ProductLandingProps = {
   product: ProductLandingContent;
-  locale: Locale;
 };
 
-export function ProductLanding({product, locale}: ProductLandingProps) {
+export async function ProductLanding({product}: ProductLandingProps) {
+  const locale = await getLocale();
+
   return (
     <main>
       <Hero
@@ -49,7 +50,7 @@ export function ProductLanding({product, locale}: ProductLandingProps) {
         description={product.ctaDescription}
         cta={{href: "#contact", label: product.ctaLabel}}
       />
-      <LeadForm locale={locale} productSlug={product.slug} productName={product.name} />
+      <LeadForm productSlug={product.slug} productName={product.name} locale={locale} />
     </main>
   );
 }

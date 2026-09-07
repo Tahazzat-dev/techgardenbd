@@ -1,0 +1,88 @@
+{
+  "eyebrow": "Pricing",
+  "title": "Clear packages for websites, web apps, and SaaS builds",
+  "description": "Choose a starting point based on scope. Every package includes discovery, responsive UI, and a production-ready handoff.",
+  "plans": [
+    {
+      "name": "Starter",
+      "price": "$999",
+      "period": "starting",
+      "description": "For businesses that need a polished marketing site with contact flows and SEO basics.",
+      "features": [
+        "Up to 5 pages",
+        "Responsive Next.js frontend",
+        "Contact or lead form",
+        "Dark / light theme",
+        "Basic SEO setup",
+        "2 revision rounds"
+      ],
+      "cta": {
+        "href": "/contact",
+        "label": "Start starter"
+      },
+      "highlighted": false
+    },
+    {
+      "name": "Business App",
+      "price": "$4,999",
+      "period": "starting",
+      "description": "For teams launching a custom web application with dashboards, auth, and Laravel API integration.",
+      "features": [
+        "Custom UI/UX for core workflows",
+        "Authenticated user areas",
+        "Laravel API integration",
+        "Admin or dashboard views",
+        "Form validation and error states",
+        "Launch support and QA"
+      ],
+      "cta": {
+        "href": "/contact",
+        "label": "Discuss scope"
+      },
+      "highlighted": true
+    },
+    {
+      "name": "SaaS Platform",
+      "price": "Custom",
+      "period": "quote",
+      "description": "For products that need subscriptions, role-based access, billing UI, and long-term scalability.",
+      "features": [
+        "Product strategy and roadmap input",
+        "Multi-role SaaS experience",
+        "Billing and subscription UI",
+        "Analytics-ready frontend events",
+        "Component system for future features",
+        "Dedicated launch and iteration support"
+      ],
+      "cta": {
+        "href": "/contact",
+        "label": "Book a call"
+      },
+      "highlighted": false
+    }
+  ],
+  "note": "Final pricing depends on features, integrations, timeline, and content readiness. We share a detailed estimate after discovery.",
+  "faqEyebrow": "FAQ",
+  "faqTitle": "Common pricing questions",
+  "faqs": [
+    {
+      "question": "Are these fixed prices?",
+      "answer": "They are starting points. After discovery, we confirm scope, timeline, and a detailed quote before work begins."
+    },
+    {
+      "question": "Do you only build the frontend?",
+      "answer": "Our core delivery is Next.js frontend work. We integrate with Laravel APIs and can collaborate with your backend team or recommend implementation partners."
+    },
+    {
+      "question": "Can I start small and expand later?",
+      "answer": "Yes. Many clients begin with a marketing site or MVP and grow into dashboards, billing, and additional modules over time."
+    },
+    {
+      "question": "What is included after launch?",
+      "answer": "Each package includes launch support. Ongoing maintenance, new features, and retainers can be arranged separately."
+    }
+  ],
+  "ctaTitle": "Not sure which package fits?",
+  "ctaDescription": "Tell us what you are building and we will recommend the right scope, timeline, and budget range.",
+  "ctaLabel": "Start a discovery call"
+}

@@ -1,0 +1,27 @@
+{
+  "brandName": "Tech Garden BD",
+  "slogan": "Your Business, Our Technology",
+  "nav": {
+    "home": "Home",
+    "support": "Support",
+    "products": "Products",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "cta": "Start a Project",
+    "languageLabel": "Current language English. Switch to Bangla"
+  },
+  "footer": "Next.js frontend experiences for SaaS agencies, integrated with Laravel APIs.",
+  "footer_des": "Tech Garden BD builds modern websites, custom web applications, mobile apps, and scalable SaaS software to digitally empower your business.",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "contact":"Contact",
+  "contact_email": "support@techgardenbd.com",
+  "contact_phone": "+880 1234567890",
+  "contact_telephone": "099619493",
+  "contact_address": "9412 Satkhira, Khulna",
+  "copyright":"© {{year}} Tech Garden BD. All rights reserved."
+}

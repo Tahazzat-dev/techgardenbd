@@ -1,5 +1,6 @@
-import {CardGrid, type CardGridItem} from "@/components/sections/card-grid";
-import {SectionHeading} from "@/components/sections/section-heading";
+import { CardGrid, type CardGridItem } from "@/components/sections/card-grid";
+import { SectionHeading } from "@/components/sections/section-heading";
+import { Section } from "@/components/shared/Section";
 
 type FeaturesProps = {
   id?: string;
@@ -11,11 +12,11 @@ type FeaturesProps = {
 
 export function Features({id = "features", eyebrow, title, description, items}: FeaturesProps) {
   return (
-    <section id={id} className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8">
+    <Section id={id}>
       <SectionHeading eyebrow={eyebrow} title={title} description={description} />
       <div className="mt-8">
         <CardGrid items={items} />
       </div>
-    </section>
+    </Section>
   );
 }

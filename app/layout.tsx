@@ -1,9 +1,11 @@
-import type {Metadata} from "next";
-import {SiteFooter} from "@/components/layout/site-footer";
-import {SiteHeader} from "@/components/layout/site-header";
-import {StoreProvider} from "@/components/layout/store-provider";
-import {ThemeProvider} from "@/components/layout/theme-provider";
-import {getLocale, t} from "@/lib/i18n";
+import { I18nProvider } from "@/components/layout/i18n-provider";
+import { StoreProvider } from "@/components/layout/store-provider";
+import { ThemeProvider } from "@/components/layout/theme-provider";
+import { ThemeScript } from "@/components/layout/theme-script";
+import { Footer } from "@/components/shared/Footer";
+import { SiteHeader } from "@/components/shared/Header";
+import { getLocale } from "@/lib/i18n/server";
+import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,18 +21,21 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
   const locale = await getLocale();
-  const dictionary = t(locale);
-
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body>
-        <StoreProvider>
-          <ThemeProvider>
-            <SiteHeader locale={locale} labels={dictionary.nav} />
-            {children}
-            <SiteFooter locale={locale} description={dictionary.footer} labels={dictionary.nav} />
-          </ThemeProvider>
-        </StoreProvider>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="min-h-[var(--app-height)] bg-background text-foreground antialiased">
+        <I18nProvider>
+          <StoreProvider>
+            <ThemeProvider>
+              <SiteHeader />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </StoreProvider>
+        </I18nProvider>
       </body>
     </html>
   );

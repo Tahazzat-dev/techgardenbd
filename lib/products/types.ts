@@ -1,4 +1,4 @@
-import type {LucideIcon} from "lucide-react";
+import type {IconName} from "@/lib/icons";
 import type {CardGridItem} from "@/components/sections/card-grid";
 import type {FaqItem} from "@/components/sections/faq-accordion";
 import type {HeroFeatured} from "@/components/sections/hero";
@@ -44,5 +44,5 @@ export type ProductLandingContent = {
   ctaTitle: string;
   ctaDescription: string;
   ctaLabel: string;
-  icon?: LucideIcon;
+  icon?: IconName;
 };

@@ -13,7 +13,15 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const storageKey = "agency-theme";
 
-function getInitialTheme(): Theme {
+function readThemeFromDocument(): Theme {
+  if (typeof document === "undefined") {
+    return "light";
+  }
+
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+
+function readThemeFromStorage(): Theme {
   if (typeof window === "undefined") {
     return "light";
   }
@@ -28,15 +36,23 @@ function getInitialTheme(): Theme {
 
 export function ThemeProvider({children}: Readonly<{children: React.ReactNode}>) {
   const [theme, setTheme] = useState<Theme>("light");
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setTheme(getInitialTheme());
+    const initialTheme = readThemeFromDocument() || readThemeFromStorage();
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+    setReady(true);
   }, []);
 
   useEffect(() => {
+    if (!ready) {
+      return;
+    }
+
     document.documentElement.classList.toggle("dark", theme === "dark");
     window.localStorage.setItem(storageKey, theme);
-  }, [theme]);
+  }, [ready, theme]);
 
   const value = useMemo(
     () => ({

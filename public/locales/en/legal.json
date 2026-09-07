@@ -1,0 +1,12 @@
+{
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "body": "Discovery form data is submitted to the configured Laravel backend and should be used only to respond to project inquiries. Production implementations must document retention, analytics, third-party integrations, and user data rights."
+  },
+  "terms": {
+    "eyebrow": "Legal",
+    "title": "Terms",
+    "body": "Website content is provided for general service information. Formal project terms, pricing, scope, timelines, and deliverables should be defined in a separate agreement."
+  }
+}

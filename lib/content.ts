@@ -1,48 +1,39 @@
-import {
-  BarChart3,
-  Blocks,
-  Cloud,
-  Code2,
-  CreditCard,
-  Database,
-  Figma,
-  LockKeyhole,
-  Rocket,
-  Search,
-  ShieldCheck,
-  Workflow,
-} from "lucide-react";
+import type {IconName} from "@/lib/icons";
 
-export const capabilities = [
+export const capabilities: Array<{
+  title: string;
+  description: string;
+  icon: IconName;
+}> = [
   {
     title: "Product Strategy",
     description: "MVP scope, user journeys, market positioning, and technical feasibility.",
-    icon: Search,
+    icon: "Search",
   },
   {
     title: "UI/UX Systems",
     description: "Responsive product interfaces, component systems, and conversion-focused flows.",
-    icon: Figma,
+    icon: "Figma",
   },
   {
     title: "Next.js Frontend",
     description: "Typed, fast, accessible frontend architecture ready for Laravel API integration.",
-    icon: Code2,
+    icon: "Code2",
   },
   {
     title: "Laravel API Integration",
     description: "Clean request contracts, validation mapping, and resilient user feedback.",
-    icon: Workflow,
+    icon: "Workflow",
   },
   {
     title: "SaaS Architecture",
     description: "Multi-tenant workspaces, RBAC, subscriptions, dashboards, and admin tooling.",
-    icon: Blocks,
+    icon: "Blocks",
   },
   {
     title: "Launch Support",
     description: "QA, analytics events, deployment readiness, and post-launch iteration planning.",
-    icon: Rocket,
+    icon: "Rocket",
   },
 ];
 
@@ -94,16 +85,16 @@ export const processSteps = [
   {title: "Measure & Improve", description: "Track meaningful events and prioritize improvements after launch."},
 ];
 
-export const technologies = [
-  {name: "Next.js", category: "Frontend", icon: Code2},
-  {name: "TypeScript", category: "Frontend", icon: ShieldCheck},
-  {name: "Tailwind CSS", category: "Frontend", icon: Figma},
-  {name: "Laravel", category: "Backend", icon: Workflow},
-  {name: "PostgreSQL", category: "Database", icon: Database},
-  {name: "Stripe", category: "Integration", icon: CreditCard},
-  {name: "RBAC", category: "Security", icon: LockKeyhole},
-  {name: "Analytics", category: "Growth", icon: BarChart3},
-  {name: "Cloud Deployments", category: "Infrastructure", icon: Cloud},
+export const technologies: Array<{name: string; category: string; icon: IconName}> = [
+  {name: "Next.js", category: "Frontend", icon: "Code2"},
+  {name: "TypeScript", category: "Frontend", icon: "ShieldCheck"},
+  {name: "Tailwind CSS", category: "Frontend", icon: "Figma"},
+  {name: "Laravel", category: "Backend", icon: "Workflow"},
+  {name: "PostgreSQL", category: "Database", icon: "Database"},
+  {name: "Stripe", category: "Integration", icon: "CreditCard"},
+  {name: "RBAC", category: "Security", icon: "LockKeyhole"},
+  {name: "Analytics", category: "Growth", icon: "BarChart3"},
+  {name: "Cloud Deployments", category: "Infrastructure", icon: "Cloud"},
 ];
 
 export const testimonials = [

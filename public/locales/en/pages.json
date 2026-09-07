@@ -1,0 +1,32 @@
+{
+  "servicesTitle": "Frontend delivery for SaaS teams that need polish and precision",
+  "servicesDescription": "A focused service model covering product clarity, interface design, frontend engineering, and Laravel API integration.",
+  "portfolioTitle": "SaaS builds with clear challenges, architecture, and outcomes",
+  "portfolioDescription": "Browse representative case studies by category and inspect the product decisions behind each build.",
+  "processTitle": "A calm, structured path from product idea to launch",
+  "processDescription": "Each step reduces uncertainty and keeps the frontend aligned with business goals and Laravel API realities.",
+  "aboutTitle": "A SaaS-focused frontend partner for serious product teams",
+  "aboutDescription": "ScaleForge exists to help founders and teams turn product uncertainty into clear, usable, production-ready frontend experiences.",
+  "contactTitle": "Tell us what you are building",
+  "contactDescription": "The frontend validates your answers, then submits the inquiry to the configured Laravel API endpoint.",
+  "aboutCards": [
+    {
+      "title": "Specialized",
+      "description": "We focus on SaaS workflows, dashboards, onboarding, billing UI, and product marketing pages."
+    },
+    {
+      "title": "API-aware",
+      "description": "The frontend is built to integrate cleanly with Laravel endpoints and backend validation."
+    },
+    {
+      "title": "Accessible",
+      "description": "Navigation, forms, themes, and interactive states are designed for keyboard and screen reader users."
+    },
+    {
+      "title": "Maintainable",
+      "description": "Typed content, reusable components, and centralized theme tokens keep the project easy to extend."
+    }
+  ],
+  "aboutCta": "Start a Discovery Call",
+  "contactCta": "Start Discovery"
+}

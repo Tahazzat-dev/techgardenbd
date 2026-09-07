@@ -1,10 +1,11 @@
-import type {LucideIcon} from "lucide-react";
-import {SectionHeading} from "@/components/sections/section-heading";
+import { SectionHeading } from "@/components/sections/section-heading";
+import { Section } from "@/components/shared/Section";
+import { getIcon, type IconName } from "@/lib/icons";
 
 export type IntegrationItem = {
   name: string;
   category: string;
-  icon: LucideIcon;
+  icon: IconName;
 };
 
 type IntegrationsProps = {
@@ -17,15 +18,15 @@ type IntegrationsProps = {
 
 export function Integrations({id, eyebrow, title, description, items}: IntegrationsProps) {
   return (
-    <section id={id} className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8">
+    <Section id={id}>
       <SectionHeading eyebrow={eyebrow} title={title} description={description} />
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => {
-          const Icon = item.icon;
+          const Icon = getIcon(item.icon);
 
           return (
             <div key={item.name} className="flex items-center gap-3 rounded-md border bg-card p-4">
-              <Icon className="h-5 w-5 text-primary" />
+              {Icon ? <Icon className="h-5 w-5 text-primary" /> : null}
               <div>
                 <p className="font-medium">{item.name}</p>
                 <p className="text-xs text-muted-foreground">{item.category}</p>
@@ -34,6 +35,6 @@ export function Integrations({id, eyebrow, title, description, items}: Integrati
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,4 +1,3 @@
-import {BarChart3, Blocks, LockKeyhole, ShieldCheck, Users, Workflow} from "lucide-react";
 import type {ProductLandingContent} from "@/lib/products/types";
 
 export const opslayer: ProductLandingContent = {
@@ -30,32 +29,32 @@ export const opslayer: ProductLandingContent = {
     {
       title: "Role-based workflows",
       description: "Assign work by role so the right people see the right tasks and records.",
-      icon: Users,
+      icon: "Users",
     },
     {
       title: "Approvals",
       description: "Route requests through a clear approval path instead of informal messages.",
-      icon: ShieldCheck,
+      icon: "ShieldCheck",
     },
     {
       title: "Team reporting",
       description: "Track throughput, bottlenecks, and ownership at the team level.",
-      icon: BarChart3,
+      icon: "BarChart3",
     },
     {
       title: "Workspace structure",
       description: "Keep branches, teams, and workstreams separated without duplicating tools.",
-      icon: Blocks,
+      icon: "Blocks",
     },
     {
       title: "Access control",
       description: "Limit sensitive operations data with RBAC from the start.",
-      icon: LockKeyhole,
+      icon: "LockKeyhole",
     },
     {
       title: "API-ready records",
       description: "Connect internal systems through typed Laravel endpoints.",
-      icon: Workflow,
+      icon: "Workflow",
     },
   ],
   processEyebrow: "How it works",
@@ -68,10 +67,10 @@ export const opslayer: ProductLandingContent = {
   stackEyebrow: "Stack",
   stackTitle: "Built for internal SaaS operations",
   integrations: [
-    {name: "Next.js", category: "Frontend", icon: Workflow},
-    {name: "Laravel", category: "Backend", icon: ShieldCheck},
-    {name: "RBAC", category: "Security", icon: LockKeyhole},
-    {name: "Analytics", category: "Reporting", icon: BarChart3},
+    {name: "Next.js", category: "Frontend", icon: "Workflow"},
+    {name: "Laravel", category: "Backend", icon: "ShieldCheck"},
+    {name: "RBAC", category: "Security", icon: "LockKeyhole"},
+    {name: "Analytics", category: "Reporting", icon: "BarChart3"},
   ],
   pricingEyebrow: "Pricing",
   pricingTitle: "Plans that match how many people run operations",

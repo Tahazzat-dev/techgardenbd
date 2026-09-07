@@ -1,9 +1,10 @@
 "use client";
 
-import {useState} from "react";
-import {ChevronDown} from "lucide-react";
-import {SectionHeading} from "@/components/sections/section-heading";
-import {cn} from "@/lib/utils";
+import { SectionHeading } from "@/components/sections/section-heading";
+import { Section } from "@/components/shared/Section";
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export type FaqItem = {
   question: string;
@@ -22,7 +23,7 @@ export function FaqAccordion({id = "faq", eyebrow, title, description, items}: F
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id={id} className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8">
+    <Section id={id}>
       <SectionHeading eyebrow={eyebrow} title={title} description={description} />
       <div className="mt-8 divide-y rounded-md border bg-card">
         {items.map((item, index) => {
@@ -46,6 +47,6 @@ export function FaqAccordion({id = "faq", eyebrow, title, description, items}: F
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 }

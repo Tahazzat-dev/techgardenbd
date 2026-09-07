@@ -1,4 +1,3 @@
-import {BarChart3, CreditCard, FileSpreadsheet, ShieldCheck, Wallet, Workflow} from "lucide-react";
 import type {ProductLandingContent} from "@/lib/products/types";
 
 export const ledgerpilot: ProductLandingContent = {
@@ -30,32 +29,32 @@ export const ledgerpilot: ProductLandingContent = {
     {
       title: "Invoice workspace",
       description: "Create, send, and track invoices with clear payment states and customer context.",
-      icon: FileSpreadsheet,
+      icon: "FileSpreadsheet",
     },
     {
       title: "Plan management",
       description: "Change seats, trials, and plan tiers without losing billing history.",
-      icon: CreditCard,
+      icon: "CreditCard",
     },
     {
       title: "Revenue signals",
       description: "See MRR movement, failed payments, and expansion at a glance.",
-      icon: BarChart3,
+      icon: "BarChart3",
     },
     {
       title: "Collections flow",
       description: "Follow up on overdue invoices with a simple, repeatable workflow.",
-      icon: Wallet,
+      icon: "Wallet",
     },
     {
       title: "Access control",
       description: "Keep finance data limited to the people who should see it.",
-      icon: ShieldCheck,
+      icon: "ShieldCheck",
     },
     {
       title: "Laravel-ready APIs",
       description: "Connect billing events and customer data through typed backend contracts.",
-      icon: Workflow,
+      icon: "Workflow",
     },
   ],
   processEyebrow: "How it works",
@@ -68,10 +67,10 @@ export const ledgerpilot: ProductLandingContent = {
   stackEyebrow: "Stack",
   stackTitle: "Built for modern SaaS billing",
   integrations: [
-    {name: "Next.js", category: "Frontend", icon: Workflow},
-    {name: "Laravel", category: "Backend", icon: ShieldCheck},
-    {name: "Stripe", category: "Payments", icon: CreditCard},
-    {name: "PostgreSQL", category: "Database", icon: BarChart3},
+    {name: "Next.js", category: "Frontend", icon: "Workflow"},
+    {name: "Laravel", category: "Backend", icon: "ShieldCheck"},
+    {name: "Stripe", category: "Payments", icon: "CreditCard"},
+    {name: "PostgreSQL", category: "Database", icon: "BarChart3"},
   ],
   pricingEyebrow: "Pricing",
   pricingTitle: "Start simple, scale with revenue operations",

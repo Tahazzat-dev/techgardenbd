@@ -1,6 +1,5 @@
 import {notFound} from "next/navigation";
 import {ProductLanding} from "@/components/sections/product-landing";
-import {getLocale} from "@/lib/i18n";
 import {getProduct, getProductSlugs} from "@/lib/products";
 
 type ProductPageProps = {
@@ -35,7 +34,5 @@ export default async function ProductPage({params}: ProductPageProps) {
     notFound();
   }
 
-  const locale = await getLocale();
-
-  return <ProductLanding product={product} locale={locale} />;
+  return <ProductLanding product={product} />;
 }

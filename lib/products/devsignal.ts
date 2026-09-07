@@ -1,4 +1,3 @@
-import {BarChart3, Code2, Eye, Gauge, ShieldCheck, Workflow} from "lucide-react";
 import type {ProductLandingContent} from "@/lib/products/types";
 
 export const devsignal: ProductLandingContent = {
@@ -30,32 +29,32 @@ export const devsignal: ProductLandingContent = {
     {
       title: "Workspace usage",
       description: "Track events and activity by workspace instead of anonymous traffic.",
-      icon: Eye,
+      icon: "Eye",
     },
     {
       title: "Activation views",
       description: "Spot which accounts reached value and which stalled after signup.",
-      icon: Gauge,
+      icon: "Gauge",
     },
     {
       title: "Demo-ready charts",
       description: "Show usage proof in a clean portal that holds up during sales conversations.",
-      icon: BarChart3,
+      icon: "BarChart3",
     },
     {
       title: "Event contracts",
       description: "Keep analytics events typed and consistent from frontend to API.",
-      icon: Code2,
+      icon: "Code2",
     },
     {
       title: "Access by workspace",
       description: "Let customers see their own usage without exposing other accounts.",
-      icon: ShieldCheck,
+      icon: "ShieldCheck",
     },
     {
       title: "Laravel API ready",
       description: "Send and query usage data through documented backend endpoints.",
-      icon: Workflow,
+      icon: "Workflow",
     },
   ],
   processEyebrow: "How it works",
@@ -68,10 +67,10 @@ export const devsignal: ProductLandingContent = {
   stackEyebrow: "Stack",
   stackTitle: "Built for developer-facing products",
   integrations: [
-    {name: "Next.js", category: "Frontend", icon: Code2},
-    {name: "Laravel API", category: "Backend", icon: Workflow},
-    {name: "Charts", category: "Insight", icon: BarChart3},
-    {name: "PostgreSQL", category: "Database", icon: ShieldCheck},
+    {name: "Next.js", category: "Frontend", icon: "Code2"},
+    {name: "Laravel API", category: "Backend", icon: "Workflow"},
+    {name: "Charts", category: "Insight", icon: "BarChart3"},
+    {name: "PostgreSQL", category: "Database", icon: "ShieldCheck"},
   ],
   pricingEyebrow: "Pricing",
   pricingTitle: "Usage insight that stays affordable as event volume grows",
